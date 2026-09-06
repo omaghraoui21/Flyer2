@@ -23,6 +23,7 @@ Flyer A5 recto/verso, prêt pour l'impression, construit en HTML/CSS et rendu en
 - Blocs contact recto (terracotta) et verso (sauge profonde) à fond perdu : le flyer tient les bords après coupe.
 - QR code toujours isolé sur blanc pur, taille 40 mm, jamais sur photo.
 - Numéro sans indicatif, réseaux Instagram @palettostudio.tn et Facebook Paletto Studio, slogan « Créer librement, briller autrement. »
+- Cinq ateliers (Manga & BD fusionnés) et une carte Co-Art space pour les artistes indépendants.
 - Vignettes disciplines rognées pour supprimer les angles arrondis et bords crème incrustés dans les fichiers sources ; filet fin + ombre légère pour détacher la photo du fond.
 - Zone de sécurité 6 mm à l'intérieur du format fini.
 

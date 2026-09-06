@@ -57,6 +57,7 @@ ul{padding:0;list-style:none}
 
 .recto .disciplines{display:flex;justify-content:space-between;margin-top:5.5mm;padding:3.2mm 0;border-top:.25mm solid var(--rule);border-bottom:.25mm solid var(--rule);flex:none}
 .recto .disciplines li{font-size:6.8pt;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--green);white-space:nowrap}
+.recto .disciplines li.accent{color:var(--terra)}
 
 /* ---------- Bandeaux de contact : aplats rectangulaires à fond perdu, bord supérieur droit ---------- */
 .band{position:absolute;left:0;right:0;bottom:0;height:56mm;color:var(--cream)}
@@ -72,6 +73,9 @@ ul{padding:0;list-style:none}
 .address{margin-top:2.6mm;font-size:7.8pt;line-height:1.55;color:rgba(245,239,230,.94)}
 .season{font-size:6.6pt;letter-spacing:1.8px;text-transform:uppercase;font-weight:600}
 .contact .phone{color:var(--ochre)}
+.contact{overflow:hidden}
+/* Fleur en filigrane monochrome : la couleur des pétales est neutralisée par le filtre, jamais redessinée */
+.band-fleur{position:absolute;right:46mm;bottom:-20mm;width:60mm;height:60mm;opacity:.11;filter:grayscale(1) brightness(3);transform:rotate(12deg)}
 
 /* QR : carré blanc sobre, coins droits, sans ombre */
 .qrcard{display:flex;flex-direction:column;align-items:center;text-align:center}
@@ -89,6 +93,7 @@ ul{padding:0;list-style:none}
 .activities{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,27mm);column-gap:7mm;row-gap:3.5mm;margin-top:5mm;flex:none}
 .activity{display:grid;grid-template-columns:30mm 1fr;gap:3.6mm;align-items:center;border-bottom:.22mm solid var(--rule);padding-bottom:3.5mm}
 .activity:nth-last-child(-n+2){border-bottom:0}
+.activity:nth-child(5){border-bottom:0}
 /* Bords crème incrustés déjà rognés à la source ; simple filet, pas d'ombre. */
 .activity .photo{width:30mm;height:23.5mm;border-radius:var(--r-photo);overflow:hidden;background:#cfc5b8;position:relative}
 .activity .photo img{width:100%;height:100%;object-fit:cover;display:block}
@@ -97,6 +102,14 @@ ul{padding:0;list-style:none}
 .num{font-family:var(--serif);font-size:7.8pt;color:var(--ochre);font-weight:600;line-height:1;letter-spacing:.4px}
 .activity h2{font-family:var(--serif);font-size:13.5pt;color:var(--green);font-weight:600;line-height:1;margin-top:1.1mm;letter-spacing:-.3px;font-variation-settings:"opsz" 60}
 .activity p{font-size:7.2pt;line-height:1.4;margin-top:1.6mm;color:#3f3931}
+
+/* Carte Co-Art space : 6e cellule de la grille, aplat sauge clair, mêmes proportions qu'une activité */
+.coart{position:relative;overflow:hidden;background:var(--sage);color:var(--cream);border-radius:var(--r-photo);padding:3.4mm 4mm;display:flex;align-items:center;margin-bottom:3.5mm}
+.coart-fleur{position:absolute;right:-6mm;top:-4mm;width:30mm;height:30mm;opacity:.22;filter:grayscale(1) brightness(3)}
+.coart-txt{position:relative}
+.coart-kicker{display:block;font-size:6.2pt;letter-spacing:1.8px;text-transform:uppercase;font-weight:600;color:var(--green)}
+.coart h2{font-family:var(--serif);font-size:11.5pt;font-weight:600;line-height:1.05;margin-top:1.2mm;letter-spacing:-.2px;color:#fff;font-variation-settings:"opsz" 60}
+.coart p{font-size:7pt;line-height:1.4;margin-top:1.6mm;color:rgba(255,255,255,.92)}
 
 @media print{
   html,body{background:#fff;padding:0;margin:0;display:block}
