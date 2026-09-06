@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Génère les livrables d'impression (PDF sRGB + PDF/X-3 CMJN FOGRA39 + aperçus 300 dpi).
 #   ./build.sh            -> flyer A5 (index.html) et étiquette ascenseur A6 (etiquette.html)
-#   ./build.sh flyer | etiquette | carree  -> un seul support
+#   ./build.sh flyer | etiquette | carree | rect  -> un seul support
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -32,4 +32,5 @@ target="${1:-all}"
 [ "$target" = all ] || [ "$target" = flyer ]     && build index.html     Paletto_Studio_Flyer_A5      2 154 216
 [ "$target" = all ] || [ "$target" = etiquette ] && build etiquette.html Paletto_Studio_Etiquette_A6  1 111 154
 [ "$target" = all ] || [ "$target" = carree ]    && build etiquette-carree.html Paletto_Studio_Etiquette_Carree_100 1 106 106
+[ "$target" = all ] || [ "$target" = rect ]      && build etiquette-rect.html   Paletto_Studio_Etiquette_Rect_210x74 1 216 80
 ls -la Paletto_Studio_*.pdf renders/

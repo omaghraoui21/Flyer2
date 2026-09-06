@@ -1,6 +1,6 @@
 # Paletto Studio - Supports imprimés saison 2026-2027
 
-Flyer A5 recto/verso et étiquette ascenseur A6, prêts pour l'impression, construits en HTML/CSS et rendus en PDF.
+Flyer A5 recto/verso et trois étiquettes (ascenseur A6, carrée, rectangulaire), prêts pour l'impression, construits en HTML/CSS et rendus en PDF.
 
 ## Livrables
 ### Flyer A5
@@ -9,18 +9,17 @@ Flyer A5 recto/verso et étiquette ascenseur A6, prêts pour l'impression, const
 - `renders/Flyer_A5-page-1.png`, `renders/Flyer_A5-page-2.png` : aperçus 300 dpi.
 - `index.html` + `styles.css` : source éditable.
 
-### Étiquette ascenseur A6 (105 x 148 mm)
-- **`Paletto_Studio_Etiquette_A6_PRINT_CMJN.pdf`** : PDF/X-3 CMJN FOGRA39, TrimBox 105 x 148 mm, fond perdu 3 mm, 100 % vectoriel (logo, textes, QR).
-- `Paletto_Studio_Etiquette_A6_RVB.pdf` : version sRGB.
-- `renders/Etiquette_A6-page-1.png` : aperçu 300 dpi.
-- `etiquette.html` + `etiquette.css` : source éditable (textes modifiables).
-- `assets/brand/qr-wa-me-21626695707.svg` : QR généré techniquement (segno, version 2, correction M, 25 modules) vers `https://wa.me/21626695707`, sans logo central. Placé dans un carré blanc 35 x 35 mm avec 4 modules de zone blanche (1 module = 1,06 mm). Scan vérifié par décodage OpenCV du PDF rendu à 72, 150 et 300 dpi.
+### Étiquettes (brief marketing : `print/BRIEF_ETIQUETTES.md`)
+Feuille de style commune `etiquettes.css` ; chaque support = un HTML éditable, un PDF/X-3 CMJN FOGRA39 (`_PRINT_CMJN.pdf`, TrimBox déclarée, fond perdu 3 mm, 100 % vectoriel) et un PDF sRGB (`_RVB.pdf`), aperçu 300 dpi dans `renders/`.
 
-### Étiquette carrée 100 x 100 mm (caisse / porte de boutique)
-- **`Paletto_Studio_Etiquette_Carree_100_PRINT_CMJN.pdf`** : PDF/X-3 CMJN FOGRA39, TrimBox 100 x 100 mm, fond perdu 3 mm, sécurité 5 mm, 100 % vectoriel.
-- `Paletto_Studio_Etiquette_Carree_100_RVB.pdf` : version sRGB.
-- `renders/Etiquette_Carree_100-page-1.png` : aperçu 300 dpi.
-- `etiquette-carree.html` + `etiquette-carree.css` : source éditable. Logo officiel centré 60 mm, même QR wa.me (carré blanc 30 mm, 4 modules de zone blanche, scan vérifié à 72/150/300 dpi).
+| Support | Fichier | Format fini | Accroche | Lieu |
+|---|---|---|---|---|
+| Ascenseur A6 | `etiquette.html` -> `Paletto_Studio_Etiquette_A6_*` | 105 x 148 mm, sécurité 6 mm | « Et si vous preniez le temps de créer ? » | Paroi / miroir d'ascenseur, lecture à 1-2 m |
+| Carrée | `etiquette-carree.html` -> `Paletto_Studio_Etiquette_Carree_100_*` | 100 x 100 mm, sécurité 5 mm | « L'art, à deux pas d'ici. » | Caisse, porte de boutique partenaire |
+| Rectangulaire | `etiquette-rect.html` -> `Paletto_Studio_Etiquette_Rect_210x74_*` | 210 x 74 mm, sécurité 5 mm | « Il y a un artiste en vous. Venez le rencontrer. » | Porte vitrée, comptoir |
+
+- `assets/brand/qr-wa-me-21626695707.svg` : QR généré techniquement (segno, version 2, correction M, 25 modules) vers `https://wa.me/21626695707`, sans logo central, 4 modules de zone blanche sur blanc pur (35 mm en A6, 30 mm carrée, 32 mm rectangulaire). Scan vérifié par décodage OpenCV de chaque PDF CMJN rendu à 72, 150 et 300 dpi.
+- Une seule action par support (scanner / WhatsApp), aucun prix ni offre.
 
 ### Commun
 - `print/` : définition PDF/X (`PDFX_def.ps`) et contrôle prépresse (`check.py`).
@@ -32,7 +31,7 @@ Flyer A5 recto/verso et étiquette ascenseur A6, prêts pour l'impression, const
 ```sh
 sudo apt-get install -y ghostscript icc-profiles   # profil ISO Coated v2 300% (ECI)
 pip install pymupdf segno
-./build.sh [flyer|etiquette|carree]   # nécessite Chrome/Chromium (var CHROME=...)
+./build.sh [flyer|etiquette|carree|rect]   # nécessite Chrome/Chromium (var CHROME=...)
 ```
 
 ## Audit prépresse (fait le 2026-09-06)
