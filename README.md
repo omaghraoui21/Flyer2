@@ -1,12 +1,22 @@
-# Paletto Studio - Flyer saison 2026-2027
+# Paletto Studio - Supports imprimés saison 2026-2027
 
-Flyer A5 recto/verso, prêt pour l'impression, construit en HTML/CSS et rendu en PDF.
+Flyer A5 recto/verso et étiquette ascenseur A6, prêts pour l'impression, construits en HTML/CSS et rendus en PDF.
 
 ## Livrables
+### Flyer A5
 - **`Paletto_Studio_Flyer_A5_PRINT_CMJN.pdf`** : fichier à envoyer à l'imprimeur. PDF/X-3:2002, CMJN, intention de sortie ISO Coated v2 300 % (FOGRA39, papier couché), TrimBox 148 x 210 mm, fond perdu 3 mm, texte et logo vectoriels, sans transparence.
 - `Paletto_Studio_Flyer_A5_RVB.pdf` : même flyer en sRGB (écran, envoi WhatsApp/mail, impression numérique de bureau).
-- `renders/page-1.png`, `renders/page-2.png` : aperçus 300 dpi.
+- `renders/Flyer_A5-page-1.png`, `renders/Flyer_A5-page-2.png` : aperçus 300 dpi.
 - `index.html` + `styles.css` : source éditable.
+
+### Étiquette ascenseur A6 (105 x 148 mm)
+- **`Paletto_Studio_Etiquette_A6_PRINT_CMJN.pdf`** : PDF/X-3 CMJN FOGRA39, TrimBox 105 x 148 mm, fond perdu 3 mm, 100 % vectoriel (logo, textes, QR).
+- `Paletto_Studio_Etiquette_A6_RVB.pdf` : version sRGB.
+- `renders/Etiquette_A6-page-1.png` : aperçu 300 dpi.
+- `etiquette.html` + `etiquette.css` : source éditable (textes modifiables).
+- `assets/brand/qr-wa-me-21626695707.svg` : QR généré techniquement (segno, version 2, correction M, 25 modules) vers `https://wa.me/21626695707`, sans logo central. Placé dans un carré blanc 35 x 35 mm avec 4 modules de zone blanche (1 module = 1,06 mm). Scan vérifié par décodage OpenCV du PDF rendu à 72, 150 et 300 dpi.
+
+### Commun
 - `print/` : définition PDF/X (`PDFX_def.ps`) et contrôle prépresse (`check.py`).
 - `assets/brand/` : logo vectoriel (SVG), symbole, QR WhatsApp, mini-charte graphique.
 - `assets/photos/` : photo du studio + 5 vignettes ateliers.
@@ -15,8 +25,8 @@ Flyer A5 recto/verso, prêt pour l'impression, construit en HTML/CSS et rendu en
 ## Regénérer
 ```sh
 sudo apt-get install -y ghostscript icc-profiles   # profil ISO Coated v2 300% (ECI)
-pip install pymupdf
-./build.sh          # nécessite Chrome/Chromium (var CHROME=...)
+pip install pymupdf segno
+./build.sh [flyer|etiquette]   # nécessite Chrome/Chromium (var CHROME=...)
 ```
 
 ## Audit prépresse (fait le 2026-09-06)
