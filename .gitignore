@@ -1,2 +1,3 @@
 .hoplite/attachments/
 .hoplite/tmp/
+__pycache__/

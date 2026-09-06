@@ -30,24 +30,23 @@ ul{padding:0;list-style:none}
 .page{
   width:154mm;height:216mm;position:relative;overflow:hidden;background:var(--cream);
   box-shadow:0 18px 50px rgba(0,0,0,.35);
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
 }
 .safe{position:absolute;top:var(--margin);right:var(--margin);left:var(--margin);display:flex;flex-direction:column}
 
 /* ---------- En-tête : bloc logo officiel (ratio 620:190), zone de protection = 1/4 de sa hauteur ---------- */
 .header{display:flex;align-items:center;justify-content:space-between;flex:none;padding-bottom:4mm;border-bottom:.3mm solid var(--terra)}
 .logo{display:block;flex:none;margin-left:-1.6mm} /* compense la marge interne du fichier logo (x=10/620) */
-.recto .logo{width:60mm;height:18.4mm}
-.verso .logo{width:52mm;height:15.9mm}
+.recto .logo{width:70mm;height:21.5mm}
+.verso .logo{width:60mm;height:18.4mm}
 .location{text-align:right;line-height:1.2}
 .location .city{font-family:var(--serif);font-size:11.5pt;font-weight:600;color:var(--ink);font-variation-settings:"opsz" 30}
 .location .micro{font-size:6.2pt;letter-spacing:1.8px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-top:1.2mm}
 .location .public{margin-top:1.8mm;font-family:var(--serif);font-style:italic;font-size:8.6pt;color:var(--green);font-weight:500}
 
 /* ---------- Recto ---------- */
-.recto .hero{margin:5mm 0 0;height:66mm;border-radius:var(--r-photo);overflow:hidden;position:relative;flex:none;background:#c9bfb2}
+.recto .hero{margin:5mm 0 0;height:63mm;border-radius:var(--r-photo);overflow:hidden;position:relative;flex:none;background:#c9bfb2}
 .recto .hero img{width:100%;height:100%;object-fit:cover;object-position:center 46%;display:block}
-.recto .hero::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 .25mm rgba(34,30,25,.12);pointer-events:none}
+.recto .hero::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 .25mm #DBD6CE;pointer-events:none}
 
 .recto .message{margin-top:6mm;flex:none;display:grid;grid-template-columns:minmax(0,1fr) 46mm;gap:7mm;align-items:end}
 .recto h1{font-family:var(--serif);font-weight:600;letter-spacing:-1.2px;line-height:.9;font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1}
@@ -70,12 +69,12 @@ ul{padding:0;list-style:none}
 .socials{display:flex;gap:5mm;margin-top:3mm;font-size:8.2pt;font-weight:500}
 .socials li{display:flex;align-items:center;gap:1.6mm;white-space:nowrap}
 .socials .ico{width:1.25em;height:1.25em}
-.address{margin-top:2.6mm;font-size:7.8pt;line-height:1.55;color:rgba(245,239,230,.94)}
+.address{margin-top:2.6mm;font-size:7.8pt;line-height:1.55;color:#F5EFE6}
 .season{font-size:6.6pt;letter-spacing:1.8px;text-transform:uppercase;font-weight:600}
 .contact .phone{color:var(--ochre)}
 .contact{overflow:hidden}
-/* Fleur en filigrane monochrome : la couleur des pétales est neutralisée par le filtre, jamais redessinée */
-.band-fleur{position:absolute;right:46mm;bottom:-20mm;width:60mm;height:60mm;opacity:.11;filter:grayscale(1) brightness(3);transform:rotate(12deg)}
+/* Fleur en filigrane monochrome (tracés officiels, teinte unie sans transparence pour rester PDF/X) */
+.band-fleur{position:absolute;right:46mm;bottom:-20mm;width:60mm;height:60mm;color:#6F7E62;transform:rotate(12deg)}
 
 /* QR : carré blanc sobre, coins droits, sans ombre */
 .qrcard{display:flex;flex-direction:column;align-items:center;text-align:center}
@@ -97,7 +96,7 @@ ul{padding:0;list-style:none}
 /* Bords crème incrustés déjà rognés à la source ; simple filet, pas d'ombre. */
 .activity .photo{width:30mm;height:23.5mm;border-radius:var(--r-photo);overflow:hidden;background:#cfc5b8;position:relative}
 .activity .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.activity .photo::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 .25mm rgba(34,30,25,.14)}
+.activity .photo::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 .25mm #D9D3CA}
 .activity .txt{min-width:0}
 .num{font-family:var(--serif);font-size:7.8pt;color:var(--ochre);font-weight:600;line-height:1;letter-spacing:.4px}
 .activity h2{font-family:var(--serif);font-size:13.5pt;color:var(--green);font-weight:600;line-height:1;margin-top:1.1mm;letter-spacing:-.3px;font-variation-settings:"opsz" 60}
@@ -105,11 +104,11 @@ ul{padding:0;list-style:none}
 
 /* Carte Co-Art space : 6e cellule de la grille, aplat sauge clair, mêmes proportions qu'une activité */
 .coart{position:relative;overflow:hidden;background:var(--sage);color:var(--cream);border-radius:var(--r-photo);padding:3.4mm 4mm;display:flex;align-items:center;margin-bottom:3.5mm}
-.coart-fleur{position:absolute;right:-6mm;top:-4mm;width:30mm;height:30mm;opacity:.22;filter:grayscale(1) brightness(3)}
+.coart-fleur{position:absolute;right:-6mm;top:-4mm;width:30mm;height:30mm;color:#B0BDA0}
 .coart-txt{position:relative}
 .coart-kicker{display:block;font-size:6.2pt;letter-spacing:1.8px;text-transform:uppercase;font-weight:600;color:var(--green)}
 .coart h2{font-family:var(--serif);font-size:11.5pt;font-weight:600;line-height:1.05;margin-top:1.2mm;letter-spacing:-.2px;color:#fff;font-variation-settings:"opsz" 60}
-.coart p{font-size:7pt;line-height:1.4;margin-top:1.6mm;color:rgba(255,255,255,.92)}
+.coart p{font-size:7pt;line-height:1.4;margin-top:1.6mm;color:#FFFFFF}
 
 @media print{
   html,body{background:#fff;padding:0;margin:0;display:block}
