@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Génère les livrables d'impression à partir de index.html.
 #   renders/page-1.png, renders/page-2.png  : aperçus 300 dpi (RVB)
-#   Paletto_Studio_Flyer_Print.pdf          : PDF 216x303 mm, RVB, polices incorporées
+#   Paletto_Studio_Flyer_Print.pdf          : PDF 154x216 mm (A5 + fond perdu), RVB, polices incorporées
 #   Paletto_Studio_Flyer_Print_CMYK.pdf     : même PDF converti en CMJN (Ghostscript)
 set -euo pipefail
 cd "$(dirname "$0")"
