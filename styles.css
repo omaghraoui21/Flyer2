@@ -34,18 +34,19 @@ ul{padding:0;list-style:none}
 .safe{position:absolute;top:var(--margin);right:var(--margin);left:var(--margin);display:flex;flex-direction:column}
 
 /* ---------- Header / logo vecteur (zone de protection charte : 1/4 de la hauteur du symbole) ---------- */
-.header{display:flex;align-items:center;justify-content:space-between;flex:none;padding-bottom:5mm;border-bottom:.3mm solid var(--terra)}
-.logo{display:flex;align-items:center;gap:4mm;text-decoration:none;color:inherit}
-.logo-mark{width:26mm;height:26mm;display:block;flex:none}
+.header{display:flex;align-items:center;justify-content:space-between;flex:none;padding-bottom:6mm;border-bottom:.3mm solid var(--terra)}
+.logo{display:flex;align-items:center;gap:5mm;text-decoration:none;color:inherit}
+.logo-mark{width:34mm;height:34mm;display:block;flex:none}
 .logo-text{display:flex;flex-direction:column;line-height:1}
-.logo-name{font-family:var(--serif);font-weight:600;font-size:36pt;color:var(--green);letter-spacing:-.4px;font-variation-settings:"opsz" 144,"SOFT" 40}
-.logo-sub{font-size:9.6pt;letter-spacing:5.6px;text-transform:uppercase;color:var(--terra);font-weight:500;margin-top:2.2mm;padding-left:.8mm}
+.logo-name{font-family:var(--serif);font-weight:600;font-size:48pt;color:var(--green);letter-spacing:-.6px;font-variation-settings:"opsz" 144,"SOFT" 40}
+.logo-sub{font-size:12.6pt;letter-spacing:7.4px;text-transform:uppercase;color:var(--terra);font-weight:500;margin-top:2.8mm;padding-left:1mm}
 .location{text-align:right;line-height:1.2}
-.location .city{font-family:var(--serif);font-size:15pt;font-weight:600;color:var(--ink);font-variation-settings:"opsz" 30}
+.location .city{font-family:var(--serif);font-size:16pt;font-weight:600;color:var(--ink);font-variation-settings:"opsz" 30}
 .location .micro{font-size:7.4pt;letter-spacing:2px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-top:1.6mm}
+.location .public{margin-top:2.6mm;font-family:var(--serif);font-style:italic;font-size:11.5pt;color:var(--green);font-weight:500}
 
 /* ---------- Recto ---------- */
-.recto .hero{margin:6mm 0 0;height:96mm;border-radius:var(--radius);overflow:hidden;position:relative;flex:none;background:#c9bfb2}
+.recto .hero{margin:6mm 0 0;height:94mm;border-radius:var(--radius);overflow:hidden;position:relative;flex:none;background:#c9bfb2}
 .recto .hero img{width:100%;height:100%;object-fit:cover;object-position:center 46%;display:block}
 .recto .hero::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 .3mm rgba(42,38,32,.12);background:linear-gradient(180deg,rgba(196,85,59,.04),transparent 30%,rgba(42,38,32,.14));pointer-events:none}
 
@@ -55,11 +56,11 @@ ul{padding:0;list-style:none}
 .recto h1 .l2{display:block;color:var(--green);font-size:50pt;font-style:italic;font-weight:500;margin-top:1mm}
 .recto .sub{font-size:11pt;line-height:1.45;color:#3a342d;padding-bottom:2mm;border-left:.4mm solid var(--ochre);padding-left:5mm}
 
-.recto .disciplines{display:flex;justify-content:space-between;margin-top:8mm;padding:4.5mm 0;border-top:.28mm solid var(--rule);border-bottom:.28mm solid var(--rule);flex:none}
+.recto .disciplines{display:flex;justify-content:space-between;margin-top:7mm;padding:4.5mm 0;border-top:.28mm solid var(--rule);border-bottom:.28mm solid var(--rule);flex:none}
 .recto .disciplines li{font-size:9pt;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--green);white-space:nowrap}
 
 /* Blocs pleins à fond perdu (CTA recto / contact verso) */
-.cta,.contact{position:absolute;left:0;right:0;bottom:0;height:78mm;color:var(--cream);border-radius:var(--radius) var(--radius) 0 0;overflow:hidden}
+.cta,.contact{position:absolute;left:0;right:0;bottom:0;height:76mm;color:var(--cream);border-radius:var(--radius) var(--radius) 0 0;overflow:hidden}
 .cta{background:var(--terra)}
 .contact{background:var(--green)}
 .cta-inner,.contact-inner{position:absolute;left:var(--margin);right:var(--margin);top:9mm;bottom:var(--margin);display:grid;grid-template-columns:1fr 50mm;gap:10mm;align-items:center}
@@ -81,18 +82,18 @@ ul{padding:0;list-style:none}
 .qrcap{margin-top:2.8mm;font-size:7pt;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--cream)}
 
 /* ---------- Verso ---------- */
-.verso .titlewrap{display:grid;grid-template-columns:1.2fr .8fr;gap:9mm;margin-top:7mm;padding-bottom:5mm;border-bottom:.28mm solid var(--rule);align-items:end;flex:none}
+.verso .titlewrap{display:grid;grid-template-columns:1.2fr .8fr;gap:9mm;margin-top:6mm;padding-bottom:5mm;border-bottom:.28mm solid var(--rule);align-items:end;flex:none}
 .verso h1{font-family:var(--serif);font-weight:600;line-height:.9;letter-spacing:-1.5px;font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1}
 .verso h1 .roman{color:var(--green);font-size:44pt;display:block}
 .verso h1 .italic{color:var(--terra);font-size:44pt;font-style:italic;font-weight:500;display:block;margin-top:1mm}
 .verso .intro{font-size:10pt;line-height:1.5;color:#3a342d;padding-bottom:2mm;border-left:.4mm solid var(--ochre);padding-left:5mm}
 
-.activities{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,38mm);column-gap:9mm;row-gap:5mm;margin-top:7mm;flex:none}
+.activities{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,36mm);column-gap:9mm;row-gap:4.5mm;margin-top:6mm;flex:none}
 .activity{display:grid;grid-template-columns:40mm 1fr;gap:5mm;align-items:center;border-bottom:.24mm solid var(--rule);padding-bottom:5mm}
 .activity:nth-last-child(-n+2){border-bottom:0}
 /* Bords crème/angles arrondis incrustés déjà rognés dans les fichiers sources ;
    filet fin + ombre pour détacher la photo du fond. */
-.activity .photo{width:40mm;height:33mm;border-radius:3mm;overflow:hidden;background:#cfc5b8;position:relative;box-shadow:0 .8mm 2mm rgba(42,38,32,.10)}
+.activity .photo{width:40mm;height:31.5mm;border-radius:3mm;overflow:hidden;background:#cfc5b8;position:relative;box-shadow:0 .8mm 2mm rgba(42,38,32,.10)}
 .activity .photo img{width:100%;height:100%;object-fit:cover;display:block}
 .activity .photo::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 .3mm rgba(42,38,32,.14)}
 .activity .txt{min-width:0}
