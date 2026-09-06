@@ -16,6 +16,12 @@ Flyer A5 recto/verso et étiquette ascenseur A6, prêts pour l'impression, const
 - `etiquette.html` + `etiquette.css` : source éditable (textes modifiables).
 - `assets/brand/qr-wa-me-21626695707.svg` : QR généré techniquement (segno, version 2, correction M, 25 modules) vers `https://wa.me/21626695707`, sans logo central. Placé dans un carré blanc 35 x 35 mm avec 4 modules de zone blanche (1 module = 1,06 mm). Scan vérifié par décodage OpenCV du PDF rendu à 72, 150 et 300 dpi.
 
+### Étiquette carrée 100 x 100 mm (caisse / porte de boutique)
+- **`Paletto_Studio_Etiquette_Carree_100_PRINT_CMJN.pdf`** : PDF/X-3 CMJN FOGRA39, TrimBox 100 x 100 mm, fond perdu 3 mm, sécurité 5 mm, 100 % vectoriel.
+- `Paletto_Studio_Etiquette_Carree_100_RVB.pdf` : version sRGB.
+- `renders/Etiquette_Carree_100-page-1.png` : aperçu 300 dpi.
+- `etiquette-carree.html` + `etiquette-carree.css` : source éditable. Logo officiel centré 60 mm, même QR wa.me (carré blanc 30 mm, 4 modules de zone blanche, scan vérifié à 72/150/300 dpi).
+
 ### Commun
 - `print/` : définition PDF/X (`PDFX_def.ps`) et contrôle prépresse (`check.py`).
 - `assets/brand/` : logo vectoriel (SVG), symbole, QR WhatsApp, mini-charte graphique.
@@ -26,7 +32,7 @@ Flyer A5 recto/verso et étiquette ascenseur A6, prêts pour l'impression, const
 ```sh
 sudo apt-get install -y ghostscript icc-profiles   # profil ISO Coated v2 300% (ECI)
 pip install pymupdf segno
-./build.sh [flyer|etiquette]   # nécessite Chrome/Chromium (var CHROME=...)
+./build.sh [flyer|etiquette|carree]   # nécessite Chrome/Chromium (var CHROME=...)
 ```
 
 ## Audit prépresse (fait le 2026-09-06)
