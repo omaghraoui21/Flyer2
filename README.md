@@ -22,6 +22,7 @@ Flyer A4 recto/verso, prêt pour l'impression, construit en HTML/CSS et rendu en
 - Palette officielle uniquement : crème, terracotta, sauge profonde, sauge, ocre.
 - Blocs contact recto (terracotta) et verso (sauge profonde) à fond perdu : le flyer tient les bords après coupe.
 - QR code toujours isolé sur blanc pur, taille 40 mm, jamais sur photo.
+- Numéro sans indicatif, réseaux Instagram @palettostudio.tn et Facebook Paletto Studio, slogan « Créer librement, briller autrement. »
 - Vignettes disciplines rognées pour supprimer les angles arrondis et bords crème incrustés dans les fichiers sources ; filet fin + ombre légère pour détacher la photo du fond.
 - Zone de sécurité 12 mm à l'intérieur du format fini.
 
