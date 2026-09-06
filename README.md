@@ -1,22 +1,31 @@
-# Paletto Studio - Flyer DA Final
+# Paletto Studio - Flyer saison 2026-2027
+
+Flyer A4 recto/verso, prêt pour l'impression, construit en HTML/CSS et rendu en PDF.
 
 ## Livrables
-- `Paletto_Studio_Flyer_DA_Final.pdf` : PDF 2 pages, format 216 x 303 mm (A4 + 3 mm de fond perdu sur les 4 côtés).
+- `Paletto_Studio_Flyer_Print.pdf` : PDF 2 pages, 216 x 303 mm (A4 + 3 mm de fond perdu), RVB, polices incorporées.
+- `Paletto_Studio_Flyer_Print_CMYK.pdf` : même fichier converti en CMJN (Ghostscript, profil prepress) pour l'imprimeur.
+- `renders/page-1.png`, `renders/page-2.png` : aperçus 300 dpi.
 - `index.html` + `styles.css` : source éditable.
-- `assets/` : logo, QR code, photos et polices utilisées.
-- `renders/` : aperçus PNG de contrôle.
+- `assets/brand/` : logo vectoriel (SVG), symbole, QR WhatsApp, mini-charte graphique.
+- `assets/photos/` : photo du studio + 6 vignettes disciplines.
+- `assets/fonts/` : Fraunces et Work Sans (polices de la charte, variables, licence OFL).
 
-## Principales corrections DA
-- Logo Paletto Studio agrandi et rendu prioritaire dans le header.
-- Photo réelle du studio utilisée en héro.
-- Hiérarchie recto simplifiée : marque -> photo -> slogan -> preuve -> WhatsApp.
-- Suppression de toute mention de séance d'essai.
-- QR WhatsApp fonctionnel avec logo Paletto, agrandi et isolé dans une zone blanche.
-- Verso reconstruit autour de 6 disciplines distinctes.
-- Système typographique réduit à EB Garamond + Inter.
-- Palette conservée : crème, terracotta, vert sauge, ocre, noir chaud.
+## Regénérer
+```sh
+./build.sh          # nécessite Chrome/Chromium (var CHROME=...), python3 + pymupdf, ghostscript (optionnel)
+```
+
+## Choix DA (conformes à la mini-charte)
+- Logo recomposé en vecteur à partir des tracés officiels (`paletto_logo_email.svg`) : net à toute taille, plus de PNG au fond crème collé.
+- Typographie de la charte : Fraunces (titres, numéros, téléphone) + Work Sans (texte, légendes).
+- Palette officielle uniquement : crème, terracotta, sauge profonde, sauge, ocre.
+- Blocs contact recto (terracotta) et verso (sauge profonde) à fond perdu : le flyer tient les bords après coupe.
+- QR code toujours isolé sur blanc pur, taille 40 mm, jamais sur photo.
+- Vignettes disciplines rognées pour supprimer les angles arrondis et bords crème incrustés dans les fichiers sources ; filet fin + ombre légère pour détacher la photo du fond.
+- Zone de sécurité 12 mm à l'intérieur du format fini.
 
 ## Impression
-- Taille de page : 216 x 303 mm.
-- Zone de coupe prévue : A4 210 x 297 mm, centrée, avec 3 mm de fond perdu.
-- Ne pas redimensionner le PDF à l'impression.
+- Format de page : 216 x 303 mm, coupe A4 210 x 297 mm centrée, 3 mm de fond perdu sur les 4 côtés.
+- Ne pas redimensionner ("taille réelle" / 100 %).
+- Utiliser le fichier CMYK si l'imprimeur l'exige, sinon le fichier RVB avec conversion par l'imprimeur.

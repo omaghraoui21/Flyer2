@@ -8,119 +8,155 @@
 </head>
 <body>
 
+<!-- Fleur d'atelier : tracés officiels de la charte, réutilisés en vecteur (jamais recolorés ni déplacés). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fleur" viewBox="40 10 180 220">
+      <path d="M120.6 76.0 C115.0 76.3 101.4 56.5 100.0 46.9 C98.7 37.3 107.0 18.7 112.6 18.4 C118.3 18.1 132.7 35.5 134.0 45.1 C135.3 54.7 126.3 75.7 120.6 76.0 Z" fill="#C4553B"/>
+      <path d="M139.7 84.3 C136.6 81.3 143.3 62.8 149.0 58.4 C154.8 54.1 171.3 55.1 174.3 58.2 C177.4 61.2 173.2 72.4 167.4 76.8 C161.6 81.2 142.7 87.4 139.7 84.3 Z" fill="#D9A441"/>
+      <path d="M148.0 102.0 C148.0 97.3 165.3 86.6 174.0 85.9 C182.7 85.2 200.0 93.3 200.0 98.0 C200.0 102.7 182.7 113.2 174.0 113.9 C165.3 114.6 148.0 106.7 148.0 102.0 Z" fill="#C4553B"/>
+      <path d="M138.1 121.2 C140.9 118.8 154.7 124.7 157.9 129.7 C161.0 134.7 159.5 148.8 156.7 151.2 C153.9 153.5 144.1 148.8 141.0 143.8 C137.9 138.8 135.3 123.5 138.1 121.2 Z" fill="#9CAF88"/>
+      <path d="M115.3 127.1 C119.5 128.2 117.0 170.7 114.2 186.5 C111.3 202.3 102.3 223.0 98.2 221.9 C94.0 220.8 86.2 195.5 89.1 179.7 C91.9 163.9 111.1 126.0 115.3 127.1 Z" fill="#C4553B"/>
+      <path d="M99.3 112.6 C101.0 116.2 90.9 128.8 84.3 130.8 C77.7 132.8 61.3 128.1 59.6 124.5 C58.0 120.8 67.6 111.1 74.2 109.1 C80.8 107.1 97.7 108.9 99.3 112.6 Z" fill="#D9A441"/>
+      <path d="M97.9 92.3 C96.3 96.3 76.0 98.1 68.6 96.1 C61.1 94.2 51.4 84.6 53.0 80.6 C54.6 76.6 70.8 70.1 78.3 72.0 C85.8 73.9 99.5 88.2 97.9 92.3 Z" fill="#C4553B"/>
+      <circle cx="97" cy="66" r="6.5" fill="#D9A441"/>
+    </symbol>
+    <symbol id="fleur-mono" viewBox="40 10 180 220">
+      <g fill="currentColor">
+        <path d="M120.6 76.0 C115.0 76.3 101.4 56.5 100.0 46.9 C98.7 37.3 107.0 18.7 112.6 18.4 C118.3 18.1 132.7 35.5 134.0 45.1 C135.3 54.7 126.3 75.7 120.6 76.0 Z"/>
+        <path d="M139.7 84.3 C136.6 81.3 143.3 62.8 149.0 58.4 C154.8 54.1 171.3 55.1 174.3 58.2 C177.4 61.2 173.2 72.4 167.4 76.8 C161.6 81.2 142.7 87.4 139.7 84.3 Z"/>
+        <path d="M148.0 102.0 C148.0 97.3 165.3 86.6 174.0 85.9 C182.7 85.2 200.0 93.3 200.0 98.0 C200.0 102.7 182.7 113.2 174.0 113.9 C165.3 114.6 148.0 106.7 148.0 102.0 Z"/>
+        <path d="M138.1 121.2 C140.9 118.8 154.7 124.7 157.9 129.7 C161.0 134.7 159.5 148.8 156.7 151.2 C153.9 153.5 144.1 148.8 141.0 143.8 C137.9 138.8 135.3 123.5 138.1 121.2 Z"/>
+        <path d="M115.3 127.1 C119.5 128.2 117.0 170.7 114.2 186.5 C111.3 202.3 102.3 223.0 98.2 221.9 C94.0 220.8 86.2 195.5 89.1 179.7 C91.9 163.9 111.1 126.0 115.3 127.1 Z"/>
+        <path d="M99.3 112.6 C101.0 116.2 90.9 128.8 84.3 130.8 C77.7 132.8 61.3 128.1 59.6 124.5 C58.0 120.8 67.6 111.1 74.2 109.1 C80.8 107.1 97.7 108.9 99.3 112.6 Z"/>
+        <path d="M97.9 92.3 C96.3 96.3 76.0 98.1 68.6 96.1 C61.1 94.2 51.4 84.6 53.0 80.6 C54.6 76.6 70.8 70.1 78.3 72.0 C85.8 73.9 99.5 88.2 97.9 92.3 Z"/>
+        <circle cx="97" cy="66" r="6.5"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ RECTO ============ -->
 <section class="page recto" aria-label="Paletto Studio - Recto">
   <div class="safe">
     <header class="header">
-      <img class="brand-full" src="assets/brand/paletto-logo-full.png" alt="Paletto Studio">
+      <a class="logo" aria-label="Paletto Studio">
+        <svg class="logo-mark"><use href="#fleur"/></svg>
+        <span class="logo-text"><span class="logo-name">Paletto</span><span class="logo-sub">Studio</span></span>
+      </a>
       <div class="location">
         <div class="city">Ennasr 2 · Ariana</div>
-        <div class="micro">co-art space indépendant</div>
+        <div class="micro">Co-art space · Art / Tech / Création</div>
       </div>
     </header>
 
-    <div class="hero">
+    <figure class="hero">
       <img src="assets/photos/hero-studio.png" alt="Atelier de peinture au Paletto Studio">
-      <div class="hero-label">Un lieu réel · des ateliers vivants</div>
-    </div>
+      <figcaption class="hero-chip">Saison 2026-2027 · Inscriptions ouvertes</figcaption>
+    </figure>
 
     <div class="message">
-      <div class="headline">
-        <h1><span class="l1">Faites place</span><span class="l2">à votre créativité.</span></h1>
-      </div>
+      <h1><span class="l1">Faites place</span><span class="l2">à votre créativité.</span></h1>
       <div class="aside">
-        <div class="top">Créer ensemble,<br>progresser à son rythme.</div>
-        <div class="bottom">PEINTURE · DESSIN · MANGA<br>BD · ROBOTIQUE · WORKSHOPS</div>
+        <svg class="aside-fleur"><use href="#fleur"/></svg>
+        <div class="aside-text">Créer ensemble,<br>chacun à sa façon.</div>
       </div>
     </div>
 
-    <div class="sub">Un espace de création partagé à Ennasr 2 pour apprendre, expérimenter et créer : peinture, dessin approfondi, manga, bande dessinée, robotique éducative et workshops créatifs.</div>
+    <p class="sub">Un espace de création partagé à Ennasr 2 pour apprendre, expérimenter et créer, de 7 ans à l'âge adulte : peinture, dessin, manga, bande dessinée, robotique éducative et workshops créatifs.</p>
 
-    <div class="proofs">
-      <div class="proof"><i></i>Petits groupes</div>
-      <div class="proof"><i></i>6 disciplines</div>
-      <div class="proof"><i></i>Enfants · Ados · Adultes</div>
-    </div>
+    <ul class="proofs">
+      <li>Petits groupes</li>
+      <li>6 disciplines</li>
+      <li>Enfants · Ados · Adultes</li>
+    </ul>
+  </div>
 
-    <div class="cta">
-      <div>
+  <!-- Bloc terracotta à fond perdu : déborde de 3 mm sur les bords bas / gauche / droite -->
+  <div class="cta">
+    <div class="cta-inner">
+      <div class="cta-text">
         <div class="cta-kicker">Infos &amp; inscriptions sur WhatsApp</div>
         <div class="phone">+216 26 695 707</div>
-        <div class="season">SAISON 2026-2027 · PLACES LIMITÉES</div>
-      </div>
-      <div class="qrbox"><img src="assets/brand/paletto-qr-whatsapp.png" alt="QR code WhatsApp Paletto Studio"></div>
-    </div>
-
-    <footer class="footer">
-      <span><strong>25 rue Khalij El Kamar</strong> · Ennasr 2 · Ariana 2037</span>
-      <span>palettostudio.tn · @paletto.studio</span>
-    </footer>
-  </div>
-</section>
-
-<section class="page verso" aria-label="Paletto Studio - Verso">
-  <div class="safe">
-    <header class="header">
-      <img class="brand-full" src="assets/brand/paletto-logo-full.png" alt="Paletto Studio">
-      <div class="location">
-        <div class="city">Ennasr 2 · Ariana</div>
-        <div class="micro">ateliers · communauté</div>
-      </div>
-    </header>
-
-    <div class="titlewrap">
-      <h1><span class="roman">Six disciplines,</span><span class="italic">un même studio.</span></h1>
-      <div class="intro"><strong>Choisissez votre atelier</strong>Des formats pour explorer une technique, approfondir une pratique ou simplement retrouver le plaisir de créer.</div>
-    </div>
-
-    <div class="activities">
-      <article class="activity">
-        <div class="photo"><img src="assets/photos/01-peinture.png" alt="Peinture"></div>
-        <div class="txt"><div class="num">01</div><div class="aname">PEINTURE</div><div class="adesc">Aquarelle, acrylique, techniques mixtes.</div><div class="tag">Dès 7 ans</div></div>
-      </article>
-      <article class="activity">
-        <div class="photo"><img src="assets/photos/02-manga.png" alt="Manga"></div>
-        <div class="txt"><div class="num">02</div><div class="aname">MANGA</div><div class="adesc">Construction, personnages, encrage.</div><div class="tag">Ados · Adultes</div></div>
-      </article>
-      <article class="activity">
-        <div class="photo"><img src="assets/photos/03-bande-dessinee.png" alt="Bande dessinée"></div>
-        <div class="txt"><div class="num">03</div><div class="aname">BANDE DESSINÉE</div><div class="adesc">Récit, découpage, narration graphique.</div><div class="tag">Dès 10 ans</div></div>
-      </article>
-      <article class="activity">
-        <div class="photo"><img src="assets/photos/04-dessin-approfondi.png" alt="Dessin approfondi"></div>
-        <div class="txt"><div class="num">04</div><div class="aname">DESSIN APPROFONDI</div><div class="adesc">Observation, volume, composition.</div><div class="tag">Ados · Adultes</div></div>
-      </article>
-      <article class="activity">
-        <div class="photo"><img src="assets/photos/05-robotique-educative.png" alt="Robotique éducative"></div>
-        <div class="txt"><div class="num">05</div><div class="aname">ROBOTIQUE ÉDUCATIVE</div><div class="adesc">Logique, prototypage, électronique.</div><div class="tag">8-14 ans</div></div>
-      </article>
-      <article class="activity">
-        <div class="photo"><img src="assets/photos/06-workshops-creatifs.png" alt="Workshops créatifs"></div>
-        <div class="txt"><div class="num">06</div><div class="aname">WORKSHOPS CRÉATIFS</div><div class="adesc">Sessions courtes, thèmes ouverts, expérimentation.</div><div class="tag">Tous âges</div></div>
-      </article>
-    </div>
-
-    <div class="coart">
-      <div class="coitem"><span class="dot"></span><div class="cotitle">Petits groupes</div></div>
-      <div class="coitem"><span class="dot"></span><div class="cotitle">Matériel fourni</div></div>
-      <div class="coitem"><span class="dot"></span><div class="cotitle">Espace partagé</div></div>
-    </div>
-
-    <div class="contact">
-      <div>
-        <div class="contact-kicker">Venez créer avec nous.</div>
-        <div class="phone">+216 26 695 707</div>
-        <div class="contact-meta">25 rue Khalij El Kamar, Ennasr 2 - Ariana 2037<br>palettostudio.tn · @paletto.studio</div>
+        <div class="cta-meta">
+          <span><strong>25 rue Khalij El Kamar</strong> · Ennasr 2 · Ariana 2037</span>
+          <span>palettostudio.tn · @paletto.studio</span>
+        </div>
       </div>
       <div class="qrcard">
         <div class="qrframe"><img src="assets/brand/paletto-qr-whatsapp.png" alt="QR code WhatsApp Paletto Studio"></div>
         <div class="qrcap">Scannez pour nous écrire</div>
       </div>
     </div>
+  </div>
+</section>
 
-    <footer class="footer">
-      <span><strong>PALETTO STUDIO</strong> · SAISON 2026-2027</span>
-      <span>CO-ART SPACE · ATELIERS · COMMUNAUTÉ</span>
-    </footer>
+<!-- ============ VERSO ============ -->
+<section class="page verso" aria-label="Paletto Studio - Verso">
+  <div class="safe">
+    <header class="header">
+      <a class="logo" aria-label="Paletto Studio">
+        <svg class="logo-mark"><use href="#fleur"/></svg>
+        <span class="logo-text"><span class="logo-name">Paletto</span><span class="logo-sub">Studio</span></span>
+      </a>
+      <div class="location">
+        <div class="city">Ennasr 2 · Ariana</div>
+        <div class="micro">Ateliers · Communauté</div>
+      </div>
+    </header>
+
+    <div class="titlewrap">
+      <h1><span class="roman">Six disciplines,</span><span class="italic">un même studio.</span></h1>
+      <p class="intro"><strong>Choisissez votre atelier</strong>Des formats pour explorer une technique, approfondir une pratique ou simplement retrouver le plaisir de créer.</p>
+    </div>
+
+    <div class="activities">
+      <article class="activity">
+        <div class="photo"><img src="assets/photos/01-peinture.png" alt="Peinture"></div>
+        <div class="txt"><span class="num">01</span><h2>Peinture</h2><p>Aquarelle, acrylique, techniques mixtes.</p><span class="tag">Dès 7 ans</span></div>
+      </article>
+      <article class="activity">
+        <div class="photo"><img src="assets/photos/02-manga.png" alt="Manga"></div>
+        <div class="txt"><span class="num">02</span><h2>Manga</h2><p>Construction, personnages, encrage.</p><span class="tag">Ados · Adultes</span></div>
+      </article>
+      <article class="activity">
+        <div class="photo"><img src="assets/photos/03-bande-dessinee.png" alt="Bande dessinée"></div>
+        <div class="txt"><span class="num">03</span><h2>Bande dessinée</h2><p>Récit, découpage, narration graphique.</p><span class="tag">Dès 10 ans</span></div>
+      </article>
+      <article class="activity">
+        <div class="photo"><img src="assets/photos/04-dessin-approfondi.png" alt="Dessin approfondi"></div>
+        <div class="txt"><span class="num">04</span><h2>Dessin approfondi</h2><p>Observation, volume, composition.</p><span class="tag">Ados · Adultes</span></div>
+      </article>
+      <article class="activity">
+        <div class="photo"><img src="assets/photos/05-robotique-educative.png" alt="Robotique éducative"></div>
+        <div class="txt"><span class="num">05</span><h2>Robotique éducative</h2><p>Logique, prototypage, électronique.</p><span class="tag">8-14 ans</span></div>
+      </article>
+      <article class="activity">
+        <div class="photo"><img src="assets/photos/06-workshops-creatifs.png" alt="Workshops créatifs"></div>
+        <div class="txt"><span class="num">06</span><h2>Workshops créatifs</h2><p>Sessions courtes, thèmes ouverts, expérimentation.</p><span class="tag">Tous âges</span></div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Bloc sauge profonde à fond perdu -->
+  <div class="contact">
+    <svg class="contact-fleur"><use href="#fleur-mono"/></svg>
+    <div class="contact-inner">
+      <div class="contact-text">
+        <ul class="perks">
+          <li>Petits groupes</li>
+          <li>Matériel fourni</li>
+          <li>Espace partagé</li>
+        </ul>
+        <div class="contact-kicker">Venez créer avec nous.</div>
+        <div class="phone">+216 26 695 707</div>
+        <div class="contact-meta">25 rue Khalij El Kamar, Ennasr 2 · Ariana 2037<br>palettostudio.tn · @paletto.studio</div>
+      </div>
+      <div class="qrcard">
+        <div class="qrframe"><img src="assets/brand/paletto-qr-whatsapp.png" alt="QR code WhatsApp Paletto Studio"></div>
+        <div class="qrcap">WhatsApp · Scannez-moi</div>
+      </div>
+    </div>
   </div>
 </section>
 
