@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="190" viewBox="0 0 620 190">
+  <defs>
+      <style><![CDATA[
+        .fraunces{font-family:"Fraunces",serif;font-weight:400}
+        .fraunces.sb{font-family:"Fraunces SemiBold","Fraunces",serif;font-weight:400}
+        .work{font-family:"Work Sans",sans-serif;font-weight:400}
+        .work.sb{font-family:"Work Sans SemiBold","Work Sans",sans-serif;font-weight:400}
+        .arabic{font-family:"DejaVu Sans",sans-serif;font-weight:400}
+      ]]></style>
+    </defs>
+  <g opacity="1" transform="rotate(0 95.0 93.0)"><svg x="10" y="8" width="170" height="170" viewBox="20 10 220 220" overflow="visible"><path d="M120.6 76.0 C115.0 76.3 101.4 56.5 100.0 46.9 C98.7 37.3 107.0 18.7 112.6 18.4 C118.3 18.1 132.7 35.5 134.0 45.1 C135.3 54.7 126.3 75.7 120.6 76.0 Z" fill="#C4553B"/><path d="M139.7 84.3 C136.6 81.3 143.3 62.8 149.0 58.4 C154.8 54.1 171.3 55.1 174.3 58.2 C177.4 61.2 173.2 72.4 167.4 76.8 C161.6 81.2 142.7 87.4 139.7 84.3 Z" fill="#D9A441"/><path d="M148.0 102.0 C148.0 97.3 165.3 86.6 174.0 85.9 C182.7 85.2 200.0 93.3 200.0 98.0 C200.0 102.7 182.7 113.2 174.0 113.9 C165.3 114.6 148.0 106.7 148.0 102.0 Z" fill="#C4553B"/><path d="M138.1 121.2 C140.9 118.8 154.7 124.7 157.9 129.7 C161.0 134.7 159.5 148.8 156.7 151.2 C153.9 153.5 144.1 148.8 141.0 143.8 C137.9 138.8 135.3 123.5 138.1 121.2 Z" fill="#9CAF88"/><path d="M115.3 127.1 C119.5 128.2 117.0 170.7 114.2 186.5 C111.3 202.3 102.3 223.0 98.2 221.9 C94.0 220.8 86.2 195.5 89.1 179.7 C91.9 163.9 111.1 126.0 115.3 127.1 Z" fill="#C4553B"/><path d="M99.3 112.6 C101.0 116.2 90.9 128.8 84.3 130.8 C77.7 132.8 61.3 128.1 59.6 124.5 C58.0 120.8 67.6 111.1 74.2 109.1 C80.8 107.1 97.7 108.9 99.3 112.6 Z" fill="#D9A441"/><path d="M97.9 92.3 C96.3 96.3 76.0 98.1 68.6 96.1 C61.1 94.2 51.4 84.6 53.0 80.6 C54.6 76.6 70.8 70.1 78.3 72.0 C85.8 73.9 99.5 88.2 97.9 92.3 Z" fill="#C4553B"/><circle cx="97" cy="66" r="6.5" fill="#D9A441"/></svg></g>
+      <text x="202.10" y="106.60" class="fraunces sb" font-size="66.30" fill="#5F7052">Paletto</text>
+      <text x="206.35" y="142.30" class="work" font-size="17.85" letter-spacing="8.50" fill="#C4553B">STUDIO</text>
+</svg>
